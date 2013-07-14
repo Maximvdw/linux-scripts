@@ -13,7 +13,7 @@ local menubar = require("menubar")
 -- Start vicious
 vicious = require("vicious")
 -- Include volume control
---require("volume")
+require("volume")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -130,7 +130,7 @@ memwidget = wibox.widget.textbox()
 vicious.register(memwidget, vicious.widgets.mem, " | Mem: $1%", 13)
 
 batwidget = wibox.widget.textbox()
-vicious.register(batwidget, vicious.widgets.bat, "| Batt: $2%", 61, "BAT0")
+vicious.register(batwidget, vicious.widgets.bat, " | Batt: $2%", 61, "BAT0")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -465,4 +465,4 @@ end)
 -- }}}
 
 -- Autostart stuff
---awful.util.spawn_with_shell("nm-applet")
+awful.util.spawn_with_shell("wicd-client --tray")
