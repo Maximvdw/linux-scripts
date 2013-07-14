@@ -13,7 +13,7 @@ local menubar = require("menubar")
 -- Start vicious
 vicious = require("vicious")
 -- Include volume control
-require("volume")
+--require("volume")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -122,7 +122,7 @@ mytextclock = awful.widget.textclock()
 -- Initialize widget
 cpuwidget = wibox.widget.textbox()
 -- Register widget
-vicious.register(cpuwidget, vicious.widgets.cpu, " | CPU: $1% ")
+vicious.register(cpuwidget, vicious.widgets.cpu, " | CPU: $1% ", 5)
 
 -- Initialize widget
 memwidget = wibox.widget.textbox()
